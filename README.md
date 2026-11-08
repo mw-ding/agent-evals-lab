@@ -25,4 +25,13 @@ Plan and schedule: [PLAN.md](PLAN.md).
 | pass@k, pass^k, noise | `harness/metrics.py` |
 | Hill-climbing | `vendor/anthropic-evals/eval-hillclimb.md` |
 
-Status: scaffolding only. The harness is being built.
+## Commands
+
+```
+uv run python -m unittest discover -s tests -t .   # tests (also run in CI)
+uv run scripts/mine_tasks.py --limit 15           # PRs → tasks/ + hidden/
+uv run scripts/validate_tasks.py                  # reference passes, no-op fails
+uv run harness/run_eval.py --round baseline --reps 2
+```
+
+Status: skeleton. Every module raises `NotImplementedError`; build them in the order in `PLAN.md`.

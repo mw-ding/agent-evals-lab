@@ -1,0 +1,7 @@
+# Levers for the agent under test. One variant per hill-climb round.
+model = "claude-sonnet-5-5"
+max_turns = 30
+timeout_s = 600
+allowed_tools = ["Read", "Edit", "Write", "Glob", "Grep", "Bash"]
+disallowed_tools = ["WebFetch", "WebSearch"]
+system_prompt_file = "agent/baseline.md"
