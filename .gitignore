@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# per-trial sandboxes and cloned source repos
+work/
+# raw transcripts can be large; commit results.jsonl and reports, not traces
+.claude/hillclimb/*/*/traces/
+.claude/settings.local.json
